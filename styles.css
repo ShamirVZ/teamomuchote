@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffccd5; /* Fondo romántico más intenso */
+}
+
+.container {
+    text-align: center;
+}
+
+.header {
+    display: inline-block;
+    position: relative;
+}
+
+.heart {
+    font-size: 2.5rem;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+#text {
+    font-size: 3rem;
+    transition: transform 0.5s ease;
+}
+
+.animation {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.stick-figure {
+    width: 50px;
+    height: 100px;
+    background: none;
+    position: relative;
+}
+
+.stick-figure::before, .stick-figure::after {
+    content: '';
+    position: absolute;
+    background: black;
+    border-radius: 50%;
+}
+
+.stick-figure::before {
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: lightpink; /* Cabeza */
+}
+
+.stick-figure::after {
+    width: 2px;
+    height: 60px;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black; /* Cuerpo */
+}
+
+.boy::before {
+    background-color: lightblue;
+}
+
+.letter-content {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f7c6d9; /* Fondo romántico, color rosado más cálido */
+    border: 1px solid #f49ac2; /* Bordes suaves para mayor contraste */
+    border-radius: 5px;
+    width: 90%;
+    max-width: 900px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+@keyframes moveUp {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100px);
+    }
+}
+
+.move-up {
+    transform: translateY(-100px);
+}
